@@ -10,8 +10,10 @@ class PostController
     /**
      * @Route("/post", name="post")
      */
-    public function index()
+    public function index(\Twig_Environment $twig)
     {
-        return new Response('<h2>estou retrnando uma string diretamente</h2>');
+        $content = $twig->render('post/index.html.twig');
+
+        return new Response($content);
     }
 }
