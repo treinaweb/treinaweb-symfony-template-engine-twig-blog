@@ -12,7 +12,12 @@ class PostController
      */
     public function index(\Twig_Environment $twig)
     {
-        $content = $twig->render('post/index.html.twig');
+        //buscar no banco de dados
+
+        $content = $twig->render('post/index.html.twig', [
+            'curso' => 'Twig',
+            'escola' => 'Treinaweb'
+        ]);
 
         return new Response($content);
     }
