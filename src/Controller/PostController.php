@@ -16,7 +16,13 @@ class PostController
 
         $content = $twig->render('post/index.html.twig', [
             'curso' => 'Twig',
-            'escola' => 'Treinaweb'
+            'escola' => 'Treinaweb',
+            'post'   => [
+                'titulo' => 'meu post',
+                'conteudo' => 'meu conteudo',
+                'data'      => '10/09/2019'
+            ],
+            'codigo'    => '<script>alert("teste sendo exibido")</script>'
         ]);
 
         return new Response($content);
