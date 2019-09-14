@@ -16,3 +16,19 @@ Código: {{ codigo }}
 {# isso é um comentário do twig #}
 
 <!-- isso é um comentário html -->
+
+{% if curso == 'Twig' %}
+    <p>Estou no curso de twig</p>
+    <p>da escola {{ escola }}</p>
+{% elseif curso == 'Symfony' %}
+    <p>Estou no curso de Symfony</p>
+{% else %}
+    <p>Estou em outro curso</p>
+{% endif %}
+
+{% if curso == 'Twig' %}
+    <p>Estou no curso de twig</p>
+    <p>da escola {{ escola }}</p>
+{% else %}
+    <p>Estou em outro curso</p>
+{% endif %}

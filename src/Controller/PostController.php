@@ -15,7 +15,7 @@ class PostController
         //buscar no banco de dados
 
         $content = $twig->render('post/index.html.twig', [
-            'curso' => 'Twig',
+            'curso' => 'Java',
             'escola' => 'Treinaweb',
             'post'   => [
                 'titulo' => 'meu post',
