@@ -4,12 +4,6 @@ Soma {{ 5 + 8 }}
 <br>
 String: {{ "valor via string" }}
 
-<h2>Dados do post</h2>
-Título: {{ post.titulo }}<br>
-Conteúdo: {{ post.conteudo }}<br>
-Data: {{ post.data }}
-
-
 <br>
 Código: {{ codigo }}
 
@@ -32,3 +26,14 @@ Código: {{ codigo }}
 {% else %}
     <p>Estou em outro curso</p>
 {% endif %}
+
+{% for numero in numeros %}
+    <p>{{ numero }}</p>
+{% endfor %}
+
+
+{% for post in posts %}
+    <h3>{{ post.titulo }}</h3>
+    <p>{{ post.conteudo }}</p>
+    <p>{{ post.data }}</p>
+{% endfor %}
