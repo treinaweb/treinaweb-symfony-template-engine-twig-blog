@@ -32,10 +32,21 @@ Código: {{ codigo }}
 {% endfor %}
 
 
-{% for post in posts if post.data == '12/09/2019' %}
+{% for post in posts %}
     <h3>{{ post.titulo }}</h3>
     <p>{{ post.conteudo }}</p>
     <p>{{ post.data }}</p>
+    <p>{{ loop.index }}</p>
+    <p>{{ loop.revindex }}</p>
+    <p>{{ loop.length }}</p>
+
+    {% if loop.first %}
+        <p>estou no primeiro item</p>
+    {% endif %}    
+
+    {% if loop.last %}
+        <p>estou no ultimo item</p>
+    {% endif %}    
 {% else %}
     <p>Nenhum post encontrado</p>
 {% endfor %}
