@@ -27,13 +27,15 @@ Código: {{ codigo }}
     <p>Estou em outro curso</p>
 {% endif %}
 
-{% for numero in numeros %}
+{% for numero in numeros if numero > 4 %}
     <p>{{ numero }}</p>
 {% endfor %}
 
 
-{% for post in posts %}
+{% for post in posts if post.data == '12/09/2019' %}
     <h3>{{ post.titulo }}</h3>
     <p>{{ post.conteudo }}</p>
     <p>{{ post.data }}</p>
+{% else %}
+    <p>Nenhum post encontrado</p>
 {% endfor %}
