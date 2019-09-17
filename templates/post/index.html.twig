@@ -10,4 +10,20 @@
     O nome da escola termina com web
 {% endif %}
 
+<br>
+{% if 4 not in numeros %}
+    o numero 4 está dentro do array numeros
+{% endif %}
 
+<br>
+{% if 'ein' in escola %}
+    tem ein
+{% endif %}
+
+<br>
+{% if curso is not empty %}
+    a variável curso não é vazia
+{% endif %}
+
+<br>
+{{ escola ~ " Cursos"  }}
