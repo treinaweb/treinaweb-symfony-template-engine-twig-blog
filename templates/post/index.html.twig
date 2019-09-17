@@ -1,52 +1,13 @@
-<h1>Estou no curso de {{ curso }} da escola {{ escola }}</h1>
+{{ 20 // 6 }}
 
-Soma {{ 5 + 8 }}
-<br>
-String: {{ "valor via string" }}
+{{ 10 ** 2 }}
 
-<br>
-Código: {{ codigo }}
-
-{# isso é um comentário do twig #}
-
-<!-- isso é um comentário html -->
-
-{% if curso == 'Twig' %}
-    <p>Estou no curso de twig</p>
-    <p>da escola {{ escola }}</p>
-{% elseif curso == 'Symfony' %}
-    <p>Estou no curso de Symfony</p>
-{% else %}
-    <p>Estou em outro curso</p>
+{% if curso starts with 'J' and curso ends with 'a' %}
+    Curso inicia com J
 {% endif %}
 
-{% if curso == 'Twig' %}
-    <p>Estou no curso de twig</p>
-    <p>da escola {{ escola }}</p>
-{% else %}
-    <p>Estou em outro curso</p>
+{% if escola ends with 'web' %}
+    O nome da escola termina com web
 {% endif %}
 
-{% for numero in numeros if numero > 4 %}
-    <p>{{ numero }}</p>
-{% endfor %}
 
-
-{% for post in posts %}
-    <h3>{{ post.titulo }}</h3>
-    <p>{{ post.conteudo }}</p>
-    <p>{{ post.data }}</p>
-    <p>{{ loop.index }}</p>
-    <p>{{ loop.revindex }}</p>
-    <p>{{ loop.length }}</p>
-
-    {% if loop.first %}
-        <p>estou no primeiro item</p>
-    {% endif %}    
-
-    {% if loop.last %}
-        <p>estou no ultimo item</p>
-    {% endif %}    
-{% else %}
-    <p>Nenhum post encontrado</p>
-{% endfor %}
