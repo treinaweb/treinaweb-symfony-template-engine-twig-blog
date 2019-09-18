@@ -35,7 +35,7 @@ class PostController
                 ],
             ],
             'codigo'    => '<script>alert("teste sendo exibido")</script>',
-            'numeros'   => [2, 4, 5, 8]
+            'numeros'   => [2, 4, 5, 8, 1, 2, 0]
         ]);
 
         return new Response($content);
