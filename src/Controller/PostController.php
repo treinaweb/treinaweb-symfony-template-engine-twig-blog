@@ -40,4 +40,14 @@ class PostController
 
         return new Response($content);
     }
+
+    /**
+     * @Route("/post/1", name="post_show")
+     */
+    public function show(\Twig_Environment $twig)
+    {
+        $content = $twig->render('post/show.html.twig');
+
+        return new Response($content);
+    }
 }
