@@ -19,7 +19,7 @@
       </div>
     </div>
   </header>
-{% endblock %}
+{% endblock header %}
 
 {% block content %}
   <!-- Post Content -->
@@ -54,7 +54,13 @@
       </div>
     </div>
   </article>
-{% endblock %}
+{% endblock content %}
+
+{% block footer %}
+  Estou na página de detalhes do posts
+
+  {{ parent() }}
+{% endblock footer %}
   
 
 
