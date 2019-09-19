@@ -21,17 +21,20 @@ class PostController
                 0 => [
                     'titulo' => 'meu post1',
                     'conteudo' => 'meu conteudo1',
-                    'data'      => '11/09/2019'
+                    'data'      => '11/09/2019',
+                    'tipo'  => 'artigo'
                 ],
                 1 => [
                     'titulo' => 'meu post2',
                     'conteudo' => 'meu conteudo2',
-                    'data'      => '12/09/2019'
+                    'data'      => '12/09/2019',
+                    'tipo'  => 'video'
                 ],
                 2 => [
                     'titulo' => 'meu post3',
                     'conteudo' => 'meu conteudo3',
-                    'data'      => '13/09/2019'
+                    'data'      => '13/09/2019',
+                    'tipo'  => 'artigo'
                 ],
             ],
             'codigo'    => '<script>alert("teste sendo exibido")</script>',

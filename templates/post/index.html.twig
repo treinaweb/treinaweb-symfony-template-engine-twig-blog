@@ -23,7 +23,7 @@
         <div class="col-lg-8 col-md-10 mx-auto">
 
           {% for post in posts %}
-            {% include "post/partials/post_content.html.twig" %}
+            {% include post.tipo == 'artigo' ? "post/partials/post_content.html.twig" : "post/partials/post_video.html.twig" %}
           {% endfor %}
 
           <!-- Pager -->
