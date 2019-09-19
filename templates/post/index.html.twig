@@ -1,4 +1,4 @@
-{% extends "base.html.twig" %}
+{% extends mobile == true ? "base_mobile.html.twig" : "base.html.twig" %}
 
 {% block header %}
      <!-- Page Header -->
