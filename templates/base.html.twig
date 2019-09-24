@@ -1,3 +1,5 @@
+{% import "macros/blog.html.twig" as blog %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,26 +64,17 @@
             <ul class="list-inline text-center">
               <li class="list-inline-item">
                 <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
+                  {{ blog.icon('fa-twitter') }}
                 </a>
               </li>
               <li class="list-inline-item">
                 <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                  </span>
+                  {{ blog.icon('fa-facebook') }}
                 </a>
               </li>
               <li class="list-inline-item">
                 <a href="#">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                  </span>
+                  {{ blog.icon('fa-github') }}
                 </a>
               </li>
             </ul>
