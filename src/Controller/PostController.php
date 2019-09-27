@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Response;
 class PostController
 {
     /**
-     * @Route("/post", name="post")
+     * @Route("/", name="posts.index")
      */
     public function index(\Twig_Environment $twig)
     {
@@ -46,7 +46,7 @@ class PostController
     }
 
     /**
-     * @Route("/post/1", name="post_show")
+     * @Route("/post/1", name="posts.show")
      */
     public function show(\Twig_Environment $twig)
     {
