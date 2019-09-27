@@ -4,8 +4,9 @@ namespace App\Controller;
 
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class PostController
+class PostController extends AbstractController
 {
     /**
      * @Route("/", name="posts.index")
@@ -48,10 +49,8 @@ class PostController
     /**
      * @Route("/post/1", name="posts.show")
      */
-    public function show(\Twig_Environment $twig)
+    public function show()
     {
-        $content = $twig->render('post/show.html.twig');
-
-        return new Response($content);
+        return $this->render('post/show.html.twig');
     }
 }
